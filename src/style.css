@@ -406,11 +406,27 @@ footer span {
     letter-spacing: .05em
   }
 }
-/* Keep snowflakes white and prevent emoji-style rendering */
+/* Snowflakes drawn with CSS instead of emoji */
 .snowflakes span {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #fffaf0;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.65);
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: var(--x);
+
+  width: var(--size);
+  height: var(--size);
+
+  background: #ffffff;
+  border-radius: 50%;
+
+  opacity: 0.85;
+  box-shadow: 0 0 7px rgba(255,255,255,0.65);
+
+  font-size: 0;
+  line-height: 0;
+
+  animation: fall var(--duration) linear infinite;
+  animation-delay: calc(-1 * var(--delay));
 }
 
 @media(prefers-reduced-motion:reduce) {

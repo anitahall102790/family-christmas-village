@@ -28,8 +28,19 @@ function App() {
 
   return <div className="site-shell">
     <div className="snowflakes" aria-hidden="true">
-      {Array.from({ length: 38 }, (_, i) => <span key={i} style={{ '--x': `${(i * 37 + 13) % 100}%`, '--delay': `${(i * 7) % 18}s`, '--duration': `${12 + (i % 9)}s`, '--size': `${7 + i % 4 * 3}px` }}>✳</span>)}
-    </div>
+  {Array.from({ length: 36 }, (_, i) => (
+    <span
+      key={i}
+      style={{
+        '--i': i,
+        '--x': `${(i * 37 + 13) % 100}%`,
+        '--delay': `${(i * 7) % 18}s`,
+        '--duration': `${12 + (i % 9)}s`,
+        '--size': `${3 + (i % 4) * 2}px`
+      }}
+    />
+  ))}
+</div>
     <main id="home">
       <div className="storybook-scene">
         <header className="site-header">
