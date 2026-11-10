@@ -406,6 +406,12 @@ footer span {
     letter-spacing: .05em
   }
 }
+/* Keep snowflakes white and prevent emoji-style rendering */
+.snowflakes span {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #fffaf0;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.65);
+}
 
 @media(prefers-reduced-motion:reduce) {
 
